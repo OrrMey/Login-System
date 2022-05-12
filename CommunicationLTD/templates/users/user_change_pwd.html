@@ -2,12 +2,12 @@
 
 {% block content %}
 
-{% include 'password-policy.html' %}
-
-<h3>Change Password</h3>
-<form method='POST'>
+<h3 style="text-align: center; position: flex;">Change Password</h3>
+<form method='POST' style="text-align: center; position: flex;">
 {{ form.as_p }} {% csrf_token %}
 <input type='submit' value='Change password' />
 </form>
+
+{% include 'password_policy.html' %}
 
 {% endblock %}
